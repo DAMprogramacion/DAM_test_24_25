@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Matematicas {
     //métodos públicos a testear:
@@ -34,10 +35,8 @@ public class Matematicas {
         }
         return pares;
     }
-
-
-
-
-
-
+    //aleatorio entre 0 y 100. 0 exclusive y 100 exclusive
+    public static int obtenerAleatori0_100() {
+        return new Random().nextInt(99) + 1;
+    }
 }

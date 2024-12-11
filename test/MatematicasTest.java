@@ -47,4 +47,18 @@ class MatematicasTest {
         assertNotEquals(List.of(2, 4, 6, 8), Matematicas.listarPares(6));
 
     }
+
+    @Test
+    void obtenerAleatori0_100() {
+        for (int i = 0; i < 10_000 ; i++) {
+            int valor = Matematicas.obtenerAleatori0_100();
+            assertTrue(valor > 0 && valor < 100);
+        }
+    }
+
+
+
+
+
+
 }
