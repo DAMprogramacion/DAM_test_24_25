@@ -37,6 +37,12 @@ public class AulaOrdenadores {
     public Ordenador eliminarOrdenador(int id) {
         return ordenadores.remove(id);
     }
+    public int eliminarOrdenadoresPorRam(int ram) {
+        //guardar en una variable el tamaño actual de la colección
+        //recorremos la colección y si encontramos un ordenador con esa RAM
+        //obtenemos el id, y con ese id llamamos a eliminarOrdenador(id)
+        //devolvemos la diferencia del tamaño inicial con el tamaño actual
+    }
 
 
 }
