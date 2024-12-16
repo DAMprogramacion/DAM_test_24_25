@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class AulaOrdenadores {
     private String nombreAlula;
@@ -39,10 +40,21 @@ public class AulaOrdenadores {
     }
     public int eliminarOrdenadoresPorRam(int ram) {
         //guardar en una variable el tamaño actual de la colección
+        int numeroOrdenadoresIniciales = ordenadores.size();
         //recorremos la colección y si encontramos un ordenador con esa RAM
         //obtenemos el id, y con ese id llamamos a eliminarOrdenador(id)
         //devolvemos la diferencia del tamaño inicial con el tamaño actual
+        Set<Integer> claves = ordenadores.keySet();
+        for (int id : claves){
+            Ordenador ordenador = ordenadores.get(id);
+            if (ordenador.ram() == ram)
+                eliminarOrdenador(id);
+        }
+        return numeroOrdenadoresIniciales - ordenadores.size();
     }
 
 
 }
+
+
+

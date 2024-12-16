@@ -54,4 +54,14 @@ class AulaOrdenadoresTest {
         assertEquals(2, aula.getOrdenadores().size());
         assertNull(ordenador);
     }
+
+    @Test
+    void eliminarOrdenadoresPorRam() {
+        assertEquals(0, aula.eliminarOrdenadoresPorRam(64));
+        assertEquals(2, aula.eliminarOrdenadoresPorRam(16));
+    }
+
+
+
+
 }
